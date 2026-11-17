@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    background-color: #FAF8F2;
+    color: #2D141C;
+    overflow-x: hidden;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F3EFE6;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #8C173A;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #5F0C25;
+  }
+}
+
+/* Subtle brand texture */
+.bg-cream-pattern {
+  background-color: #FAF8F2;
+  background-image: radial-gradient(#8C173A 0.45px, transparent 0.45px), radial-gradient(#8C173A 0.45px, #FAF8F2 0.45px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+  background-opacity: 0.04;
+}
+
+.bg-burgundy-glow {
+  background: radial-gradient(circle at 50% 30%, rgba(140, 23, 58, 0.15) 0%, rgba(250, 248, 242, 0) 70%);
+}
+
+.bg-burgundy-deep {
+  background-color: #8C173A;
+  background-image: radial-gradient(circle at 80% 20%, #A6264C 0%, #8C173A 50%, #5F0C25 100%);
+}
+
+/* Luxury card glow */
+.card-hover-effect {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-hover-effect:hover {
+  transform: translateY(-6px);
+}
